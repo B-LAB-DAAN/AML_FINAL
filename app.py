@@ -36,10 +36,10 @@ model.to(device)
 model.eval()
 
 preprocess = transforms.Compose([
-    transforms.Grayscale(num_output_channels=3),  # Convert grayscale to 3 channels for ResNet
+    transforms.Grayscale(num_output_channels=3),
     transforms.Resize((224, 224)),  # Resize for ResNet-18
     transforms.ToTensor(),
-    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),  # Standard normalization for ResNet
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), 
 ])
 
 class_labels = {0: "Not Tumor", 1: "Tumor"}
