@@ -9,7 +9,7 @@ from PIL import Image, ImageOps
 class EnhancedResNet18(nn.Module):
     def __init__(self):
         super(EnhancedResNet18, self).__init__()
-        self.resnet = resnet18(pretrained=True)  # Using ResNet-18
+        self.resnet = resnet18(pretrained=True) 
         # Update the classifier for two classes (Not Tumor and Tumor)
         self.resnet.fc = nn.Sequential(
             nn.Linear(self.resnet.fc.in_features, 256),
