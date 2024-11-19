@@ -39,6 +39,18 @@ torch.save({
     "optimizer_state_dict": enhanced_optimizer.state_dict(),
     "metrics": enhanced_metrics
 }, "enhanced_model.pth")
+```
+## Step 2. Launch the Application
+To launch the application, use Streamlit to run it. Navigate to the application directory and execute the following command:
 
----
----
+```bash
+streamlit run app.py
+```
+## Step 3. Upload an Image
+se the app to upload a brain tumor image in **JPEG**, **PNG**, or **JPG** format. The app will preprocess the image and display its grayscale version.
+
+## Step 4. View Prediction Results
+After uploading an image, the app will:
+
+- Predict whether the image contains a Tumor or Not Tumor.
+- Display probability scores for each class (Tumor and Not Tumor).
